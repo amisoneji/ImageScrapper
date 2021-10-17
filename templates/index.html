@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Image Scrapper</h1>
+
+    <div class="form">
+        <form action="/searchImages" method="POST">
+            <!-- 1 -->
+            <input type="text" name="content" id="content" placeholder="Enter Text" >
+            <input type="number" name="Noofimages" stages="1" id="Noofimages" placeholder="Enter number" >
+<!--            <lable for="Noofimages">No Of Image to download:><input type="number" name="Age" min="1" id="Noofimages" placeholder="No Of Image to download"></lable>-->
+
+            <input type="submit" value="Submit and Download">
+        </form>
+    </div>
+</div>
+{% endblock %}
